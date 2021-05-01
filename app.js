@@ -158,10 +158,9 @@ function nombrarElemento(e) {
             for (let index = 0; index < estadosOxidacion.length; index++) {
                 const element = estadosOxidacion[index];
 
-                estadosOxidacion[index] = parseInt(element)
-
+                estadosOxidacion[index] = parseInt(String(element).trim())
                 if (element < 0) {
-                    estadosOxidacion[index] = element * -1
+                    console.log("es negativo" + estadosOxidacion.splice(index, 1))
                 }
             }
 
@@ -221,27 +220,7 @@ function nombrarElemento(e) {
                 if ((columna % 2 == 0 && valenciaUtilizada % 2 == 0) || (columna % 2 != 0 && valenciaUtilizada % 2 != 0)) {
                     nombreGeneral = ' Anhidrido '
 
-                    //segun los rangos
-                    if (valenciaUtilizada == 1 || valenciaUtilizada == 2) {
-                        prefijo = 'hipo'
-                        sufijo = 'oso'
-                    } else if (valenciaUtilizada == 3 || valenciaUtilizada == 4) {
-                        sufijo = 'oso'
-                    } else if (valenciaUtilizada == 5 || valenciaUtilizada == 6) {
-                        sufijo = 'ico'
-                    } else {
-                        prefijo = 'per'
-                        sufijo = 'ico'
-                    }
-
-                } else {
-                    nombreGeneral = ' Oxido '
-
-                    //valencia unica
-                    if (estadosOxidacion.length == 1) {
-                        sufijo = 'ico'
-                    } else {
-
+                    if (estadosOxidacion.length > 2) {
                         //segun los rangos
                         if (valenciaUtilizada == 1 || valenciaUtilizada == 2) {
                             prefijo = 'hipo'
@@ -254,7 +233,52 @@ function nombrarElemento(e) {
                             prefijo = 'per'
                             sufijo = 'ico'
                         }
+                    } else {
+                        //valencia unica
+                        if (estadosOxidacion.length == 1) {
+                            sufijo = 'ico'
+                        } else {
 
+                            //valencia mayor o menor
+                            if (valenciaUtilizada == estadosOxidacion[0]) {
+                                sufijo = 'oso'
+                            } else {
+                                sufijo = 'ico'
+                            }
+
+                        }
+                    }
+
+                } else {
+                    nombreGeneral = ' Oxido '
+
+                    if (estadosOxidacion.length > 2) {
+                        //segun los rangos
+                        if (valenciaUtilizada == 1 || valenciaUtilizada == 2) {
+                            prefijo = 'hipo'
+                            sufijo = 'oso'
+                        } else if (valenciaUtilizada == 3 || valenciaUtilizada == 4) {
+                            sufijo = 'oso'
+                        } else if (valenciaUtilizada == 5 || valenciaUtilizada == 6) {
+                            sufijo = 'ico'
+                        } else {
+                            prefijo = 'per'
+                            sufijo = 'ico'
+                        }
+                    } else {
+                        //valencia unica
+                        if (estadosOxidacion.length == 1) {
+                            sufijo = 'ico'
+                        } else {
+
+                            //valencia mayor o menor
+                            if (valenciaUtilizada == estadosOxidacion[0]) {
+                                sufijo = 'oso'
+                            } else {
+                                sufijo = 'ico'
+                            }
+
+                        }
                     }
 
                 }
