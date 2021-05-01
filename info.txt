@@ -1,0 +1,22 @@
+Data Object
+------------------
+symbol
+name
+atomicMass
+atomicNumber
+atomicRadius
+boilingPoint
+bondingType
+cpkHexColor
+density
+electronAffinity
+electronegativity
+electronicConfiguration
+groupBlock
+ionRadius
+ionizationEnergy
+meltingPoint
+oxidationStates
+standardState
+vanDerWaalsRadius
+yearDiscovered

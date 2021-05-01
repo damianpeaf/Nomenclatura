@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+* {
+    top: 0;
+    left: 0;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+
+    background: #000046; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1cb5e0, #000046); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #1cb5e0,
+        #000046
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* background: #c31432;
+    background: -webkit-gradient(linear, left top, right top, from(#c31432), to(#240b36));
+    background: linear-gradient(to right, #c31432, #240b36); */
+}
+
+header {
+    border-bottom: 3px solid #000046;
+    background: #020204;
+    font-family: "Righteous", cursive;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px -5px 15px 3px #000046;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#buscador {
+    text-align: center;
+}
+
+#buscar {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    margin: 1rem;
+    font-family: "Comfortaa", cursive;
+    color: white;
+}
+
+#resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#interaccion {
+    display: grid;
+    font-family: "Comfortaa", cursive;
+    color: black;
+    grid-template-rows: 75% 25%;
+}
+
+#table {
+    border-spacing: 0;
+}
+
+#table thead {
+    background-color: #4caf50;
+}
+
+#table tbody {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+#table td,
+#table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+    box-sizing: content-box;
+}
+
+#formula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#menosElectro {
+    display: inline-block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid #fa1e4e;
+}
+
+#oxigeno {
+    display: inline-block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid #fa1e4e;
+}
+
+#representacion {
+    width: 35vh;
+    height: 20vh;
+    background-color: white;
+
+    font-size: 2rem;
+    font-style: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#modificacion {
+    color: white;
+}
+
+.button3 {
+    background-color: white;
+    color: black;
+    font-family: "Comfortaa", cursive;
+    padding: 0.5rem;
+    font-style: 1rem;
+    border: 2px solid #f44336;
+}
+
+.button3:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#nombre {
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boton-nom {
+    margin-top: 1rem;
+}
+
+#representacion sub {
+    font-size: 1rem;
+}
+
+footer {
+    box-shadow: 0px -5px 15px 3px rgba(0, 0, 0, 0.94);
+    background-color: #1a1a1a;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.7rem;
+    font-family: "Righteous", cursive;
+    color: #ffffff;
+}
+
+footer h2 {
+    padding-right: 1rem;
+}

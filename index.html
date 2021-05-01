@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Nomenclatura compuestos Oxigenados</h1>
+    </header>
+
+    <main>
+
+        <div id="buscar">
+            <div id="buscador">
+                <p id="instrucciones">Ingrese el numero atomico del elemento</p>
+                <input type="text" id="BuscadorElemento">
+                <input type="hidden" id="numeroAtomico">
+            </div>
+
+            <div id="resultados">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <td>Simbolo</td>
+                            <td>Estados de oxidación</td>
+                            <td>Acciones</td>
+                        </tr>
+                    </thead>
+                    <tbody id="list">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div id="interaccion">
+            <div id="formula">
+
+                <div id="modificacion">
+                    <p>Elemento: <input id="numeroAtomicoElemento" type="text" readonly> <input id="numeroElementos"
+                            type="number" value="1" min="1" max="30"></p>
+                    <p>Numero de oxigenos: <input id="numeroOxigenos" type="number" value="1" min="1" max="30"> </p>
+                    <input type="hidden" id="metal" value="nometal">
+                    <input type="hidden" id="valenciaUtilizada" value="0    ">
+                </div>
+
+                <div id="representacion">
+                    <div id="menosElectro">
+                        <span id="elemento"></span>
+                        <sub id="subIndiceElemento">1</sub>
+                    </div>
+                    <div id="oxigeno">
+                        <span id="elemento">O</span>
+                        <sub id="subIndiceOxigeno">1</sub>
+                    </div>
+                </div>
+
+                <div id="boton-nom">
+                    <p style="color: white;" id="estado"></p>
+                    <button id="btn-validar" class="button3"> validar </button>
+                    <button class="button3"> Nombralo! </button>
+                </div>
+
+            </div>
+            <div id="nombre">
+                <p id="nombre-compuesto"> Oxido Manganico</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>Por: Damian Peña - Carnet 202110568</h2>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>
