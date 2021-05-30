@@ -565,7 +565,7 @@
         "ionizationEnergy": 763,
         "meltingPoint": 1811,
         "name": "Ferr",
-        "oxidationStates": "2,3",
+        "oxidationStates": "2,3,6",
         "standardState": "solid",
         "symbol": "Fe",
         "vanDelWaalsRadius": "",
